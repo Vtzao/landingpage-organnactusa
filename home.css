@@ -1,0 +1,156 @@
+/* home.css */
+
+/* Se você não tiver um arquivo CSS global para body, pode adicionar aqui: */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Arial, sans-serif; /* Exemplo de fonte padrão */
+  text-align: center;
+  color: var(--default-color); /* Cor de texto padrão para o corpo da página */
+  background-color: var(--background-color); /* Cor de fundo padrão */
+}
+
+/* Garantir que o html e body tenham altura total para 100vh funcionar corretamente */
+html, body {
+  height: 100%;
+}
+
+/* Estilo para seções que vêm após a seção 'home' para evitar que o conteúdo fique abaixo do navbar fixo */
+/* A altura do padding-top deve ser igual ou maior que a altura da sua navbar */
+main section:not(#hero) { /* Usando o ID #hero da sua section */
+  padding-top: 80px; /* Ajuste este valor conforme a altura final da sua navbar */
+}
+
+
+.home { /* Seu HTML tem <section class="home" id="hero"> */
+  width: 100%;
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  min-height: 600px; /* Altura mínima para garantir visibilidade do conteúdo */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/bg.svg') no-repeat center center;
+  background-size: cover;
+  background-position: center center;
+  /* background-attachment: fixed; */ /* Descomente se quiser o efeito parallax no background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center; /* Garante que o texto dentro do flex container seja centralizado se não ocupar toda a largura */
+}
+
+.container-home {
+  width: 90%;
+  max-width: 1200px; /* Limite a largura máxima para telas grandes */
+  /* height: 90%; */ /* Removido - deixe o conteúdo definir a altura ou use padding */
+  padding-top: 100px; /* Espaço para a navbar fixa não sobrepor o conteúdo inicial */
+  padding-bottom: 60px; /* Espaço antes da seta */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.img-home {
+  width: 100%;
+  max-width: 320px; /* Ajustado para melhor responsividade */
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin-top: 0; /* Removido, o flex container centraliza */
+  margin-bottom: 40px; /* Espaço abaixo da imagem */
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-home:hover {
+  transform: scale(1.07);
+}
+
+.texto-home {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700; /* Ajustado de 800 para 700 que é mais comum */
+  margin-top: 0; /* Removido, o espaçamento é controlado pelo container e outros elementos */
+  margin-bottom: 15px; /* Espaço abaixo deste texto */
+  font-size: clamp(20px, 4vw, 28px); /* Fonte responsiva */
+  color: #fff;
+  word-wrap: break-word;
+  max-width: 90%;
+}
+
+.texto2-home {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: clamp(16px, 2.5vw, 20px); /* Fonte responsiva */
+  color: #fff;
+  margin-bottom: 30px; /* Espaço abaixo deste texto e antes do botão */
+  word-wrap: break-word;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.btn-partner {
+  background-color: transparent;
+  color: #fff;
+  padding: 12px 25px;
+  border: 1px solid #fff;
+  border-radius: 4px; /* Leve arredondamento para consistência com btn-getstarted */
+  font-size: clamp(14px, 2vw, 16px); /* Fonte responsiva */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-bottom: 60px; /* Espaço abaixo do botão antes da seta (se a seta estiver dentro do container-home) */
+}
+
+.btn-partner:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.seta-home {
+  display: block;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px; /* O SVG já tem tamanho, isso pode não ser necessário */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.seta-home svg { /* Estilizando o SVG diretamente se o font-size não funcionar */
+    width: 40px;
+    height: 40px;
+}
+
+.seta-home:hover {
+  opacity: 1.0;
+  transform: translateX(-50%) translateY(-10px); /* Leve movimento para cima */
+}
+
+/* Estilos para outras seções (exemplo) */
+#services, #contact {
+    padding: 60px 0; /* Espaçamento interno para as seções */
+    min-height: 50vh; /* Altura mínima para visualização do scroll */
+}
+#services {
+    background-color: #f8f9fa; /* Cor de fundo para a seção de serviços */
+}
+#contact {
+    background-color: #e9ecef; /* Cor de fundo para a seção de contato */
+}
+#services h2, #contact h2 {
+    color: #333; /* Cor dos títulos das seções */
+    margin-bottom: 30px;
+}
+#services p, #contact p {
+    color: #555; /* Cor do texto das seções */
+}
