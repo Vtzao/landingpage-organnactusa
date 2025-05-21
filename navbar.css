@@ -62,22 +62,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 56px;
   margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: 600;
-  color: var(--heading-color); /* Logo usa a cor de título (branco) */
-}
-
-.header .logo span {
-  color: var(--accent-color); /* Ponto no logo */
-  font-size: 24px;
-  font-weight: 600;
-  padding-left: 3px;
 }
 
 .header .btn-getstarted,

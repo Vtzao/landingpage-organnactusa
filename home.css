@@ -26,10 +26,10 @@ main section:not(#hero) { /* Usando o ID #hero da sua section */
   width: 100%;
   height: 100vh; /* Ocupa toda a altura da viewport */
   min-height: 600px; /* Altura mínima para garantir visibilidade do conteúdo */
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/bg.svg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/bg.svg') no-repeat center center;
   background-size: cover;
   background-position: center center;
-  /* background-attachment: fixed; */ /* Descomente se quiser o efeito parallax no background */
+  background-attachment: fixed; /* Efeito parallax no background */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +55,7 @@ main section:not(#hero) { /* Usando o ID #hero da sua section */
 
 .img-home {
   width: 100%;
-  max-width: 320px; /* Ajustado para melhor responsividade */
+  max-width: 420px; /* Ajustado para melhor responsividade */
   height: auto;
   cursor: pointer;
   display: block;
@@ -75,7 +75,7 @@ main section:not(#hero) { /* Usando o ID #hero da sua section */
   font-weight: 700; /* Ajustado de 800 para 700 que é mais comum */
   margin-top: 0; /* Removido, o espaçamento é controlado pelo container e outros elementos */
   margin-bottom: 15px; /* Espaço abaixo deste texto */
-  font-size: clamp(20px, 4vw, 28px); /* Fonte responsiva */
+  font-size: clamp(10px, 4vw, 20px); /* Fonte responsiva */
   color: #fff;
   word-wrap: break-word;
   max-width: 90%;
