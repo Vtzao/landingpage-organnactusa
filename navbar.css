@@ -8,16 +8,16 @@
   --heading-color: #ffff;      /* Cor para títulos, incluindo o logo na navbar */
   --accent-color: #f9b132;     /* Cor de destaque para botões, links ativos */
   --surface-color: #ffffff;
-  --contrast-color: #3a3939;   /* Cor de contraste para texto sobre fundos coloridos */
+  --contrast-color: #323a3a;   /* Cor de contraste para texto sobre fundos coloridos */
 }
 
 /* Nav Menu Colors - Específicas para o menu de navegação */
 :root {
   --nav-color: #ffff;                     /* Cor padrão dos links da navbar (inicialmente branca) */
   --nav-hover-color: #f9b132;            /* Cor dos links da navbar ao passar o mouse/ativo */
-  --nav-mobile-background-color: #ffffff;
+  --nav-mobile-background-color: rgba(0, 110, 106, 0.616);
   --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #3a3939;
+  --nav-dropdown-color: #ffffff;
   --nav-dropdown-hover-color: #f9b132;
 }
 

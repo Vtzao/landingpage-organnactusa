@@ -1,0 +1,280 @@
+/* Estilos gerais para o corpo da página onde o widget será inserido */
+body.organnact-widget-page-context {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Para evitar scrollbar horizontal devido a animações de entrada */
+}
+
+/* Container principal do widget de indicação Organnact */
+.organnact-referral-widget {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.organnact-referral-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* --- ANIMAÇÕES KEYFRAMES --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleInX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Título do widget */
+.organnact-referral-title {
+    font-size: 28px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 8px;
+    opacity: 0; /* Estado inicial para animação */
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+/* Subtítulo do widget */
+.organnact-referral-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    opacity: 0; /* Estado inicial para animação */
+    animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+/* Container para os passos/círculos de indicação */
+.organnact-referral-steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Cada passo individual */
+.organnact-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    position: relative;
+    opacity: 0; /* Estado inicial para animação */
+    animation: fadeInUp 0.5s ease-out forwards; /* Delay será aplicado individualmente */
+}
+
+/* Delays para cada step */
+.organnact-step:nth-child(1) { animation-delay: 0.6s; }
+.organnact-step:nth-child(2) { animation-delay: 0.8s; }
+.organnact-step:nth-child(3) { animation-delay: 1.0s; }
+
+
+/* Círculos com informações de vendas */
+.organnact-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: pointer; /* Indica interatividade */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.organnact-step:hover .organnact-circle {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.organnact-circle-blue {
+    border: 3px solid #00B2FF;
+    color: #00B2FF;
+}
+.organnact-step:hover .organnact-circle-blue {
+    box-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+}
+
+.organnact-circle-purple {
+    border: 3px solid #8A2BE2;
+    color: #8A2BE2;
+}
+.organnact-step:hover .organnact-circle-purple {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.organnact-circle-green {
+    border: 3px solid #32CD32;
+    color: #32CD32;
+}
+.organnact-step:hover .organnact-circle-green {
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
+}
+
+/* Barra de linha do tempo colorida */
+.organnact-timeline-bar {
+    display: flex;
+    width: 100%;
+    height: 15px;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 7.5px;
+    overflow: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: scaleInX 0.8s ease-out 1.3s forwards;
+    /* Adicionamos cursor: pointer aqui se a barra toda deve parecer interativa
+       ou nos segmentos individuais se apenas eles são.
+    */
+}
+
+/* Segmentos da barra de linha do tempo */
+.organnact-segment {
+    height: 100%;
+    cursor: pointer; /* Indica que cada segmento é interativo */
+    /* Transição para efeitos de hover nos segmentos */
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre a barra INTEIRA: torna os segmentos levemente opacos */
+.organnact-timeline-bar:hover .organnact-segment {
+    opacity: 0.6;
+}
+
+/* Efeito ao passar o mouse sobre UM SEGMENTO ESPECÍFICO: restaura opacidade e adiciona brilho */
+.organnact-timeline-bar .organnact-segment:hover {
+    opacity: 1;
+    filter: brightness(1.25); /* Aumenta o brilho do segmento sob o mouse */
+}
+
+
+.organnact-segment-blue { background-color: #00B2FF; width: 33.33%; }
+.organnact-segment-purple { background-color: #8A2BE2; width: 33.33%; }
+.organnact-segment-green { background-color: #32CD32; width: 33.34%; }
+
+/* Triângulos/setas abaixo dos círculos, apontando para a barra */
+.organnact-step::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 100px;
+    transition: border-top-color 0.3s ease-in-out;
+}
+
+.organnact-step:nth-child(1)::after { border-top: 10px solid #00B2FF; }
+.organnact-step:nth-child(2)::after { border-top: 10px solid #8A2BE2; }
+.organnact-step:nth-child(3)::after { border-top: 10px solid #32CD32; }
+
+.organnact-step:nth-child(1):hover::after { border-top-color: #0090d8; }
+.organnact-step:nth-child(2):hover::after { border-top-color: #701ebd; }
+.organnact-step:nth-child(3):hover::after { border-top-color: #28a428; }
+
+
+/* Container para as informações de preço */
+.organnact-price-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+/* Bloco individual de preço */
+.organnact-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.organnact-price:nth-child(1) { animation-delay: 1.6s; }
+.organnact-price:nth-child(2) { animation-delay: 1.8s; }
+.organnact-price:nth-child(3) { animation-delay: 2.0s; }
+
+.organnact-price-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.organnact-price-label {
+    font-size: 14px;
+    color: #777;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    .organnact-referral-container { padding: 30px; }
+    .organnact-referral-title { font-size: 26px; }
+    .organnact-referral-subtitle { font-size: 15px; }
+}
+
+@media (max-width: 600px) {
+    .organnact-referral-container { padding: 20px; }
+    .organnact-referral-title { font-size: 22px; }
+    .organnact-referral-subtitle { font-size: 14px; margin-bottom: 30px; }
+
+    .organnact-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 11px;
+    }
+    .organnact-step::after { top: 85px; }
+    .organnact-timeline-bar { height: 12px; margin-top: 40px; }
+    .organnact-price-value { font-size: 28px; }
+    .organnact-price-label { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+    .organnact-step { width: 100px; }
+    .organnact-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 10px;
+    }
+    .organnact-step::after {
+        top: 75px;
+        border-left-width: 8px;
+        border-right-width: 8px;
+        border-top-width: 8px;
+    }
+    .organnact-timeline-bar { margin-top: 30px; }
+    .organnact-price-value { font-size: 24px; }
+}
