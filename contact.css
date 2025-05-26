@@ -1,0 +1,231 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .contact-info-box {
+  background-color: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact .contact-info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-info-box .icon-box {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact .contact-info-box .icon-box i {
+  font-size: 24px;
+}
+
+.contact .contact-info-box .info-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-info-box .info-content p {
+  margin-bottom: 5px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact .contact-info-box .info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.contact .map-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.contact .map-section iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact .form-container-overlap {
+  position: relative;
+  margin-top: -150px;
+  margin-bottom: 60px;
+  z-index: 10;
+}
+
+.contact .contact-form-wrapper {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.contact .contact-form-wrapper h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.contact .contact-form-wrapper h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.contact .contact-form-wrapper .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon {
+  position: relative;
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 18px;
+  z-index: 10;
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon i.message-icon {
+  top: 28px;
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon textarea+i {
+  top: 25px;
+  transform: none;
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon .form-control {
+  border-radius: 8px;
+  padding: 12px 15px 12px 45px;
+  height: 3.5rem;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  font-size: 15px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.contact .contact-form-wrapper .form-group .input-with-icon textarea.form-control {
+  height: 180px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.contact .contact-form-wrapper .btn-submit {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--contrast-color);
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .contact-form-wrapper .btn-submit:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.contact .contact-form-wrapper .btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .contact-form-wrapper .loading,
+.contact .contact-form-wrapper .error-message,
+.contact .contact-form-wrapper .sent-message {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .contact .form-container-overlap {
+    margin-top: -120px;
+  }
+
+  .contact .contact-form-wrapper {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .contact-info-box {
+    margin-bottom: 20px;
+  }
+
+  .contact .form-container-overlap {
+    margin-top: -100px;
+  }
+
+  .contact .contact-form-wrapper {
+    padding: 25px;
+  }
+
+  .contact .contact-form-wrapper h2 {
+    font-size: 24px;
+  }
+
+  .contact .map-section {
+    height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact .form-container-overlap {
+    margin-top: -80px;
+  }
+
+  .contact .contact-form-wrapper {
+    padding: 20px;
+  }
+
+  .contact .btn-submit {
+    width: 100%;
+  }
+
+  .contact .map-section {
+    height: 400px;
+  }
+}

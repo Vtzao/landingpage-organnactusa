@@ -140,6 +140,7 @@ console.log("Script.js carregado e executando.");
   document.addEventListener('scroll', toggleScrollTop);
 
 
+
   /**
    * Ajusta a posição do scroll ao carregar a página para URLs com hash links.
    * Útil para que a navbar fixa não cubra o título da seção.
