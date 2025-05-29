@@ -192,6 +192,81 @@ console.log("Script.js carregado e executando.");
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const apiKey = 'ODZCWjZUaVlsM0JINElLbUtxdVFpMnRISUFNWnFRYmZsOW1CU2dFQQ=='; // ⚠️ SUBSTITUA PELA SUA CHAVE DE API
+    const countryCode = 'US'; // Código para Estados Unidos
+
+    const stateDropdown = document.getElementById('stateDropdown');
+    const cityDropdown = document.getElementById('cityDropdown');
+
+    const headers = new Headers();
+    headers.append("X-CSCAPI-KEY", apiKey);
+
+    const requestOptions = {
+        method: 'GET',
+        headers: headers,
+        redirect: 'follow'
+    };
+
+    // 1. Carregar Estados dos EUA
+    fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states`, requestOptions)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(states => {
+            states.sort((a, b) => a.name.localeCompare(b.name)); // Ordenar estados por nome
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state.iso2; // Usar o código ISO2 do estado como valor
+                option.textContent = state.name;
+                stateDropdown.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            stateDropdown.innerHTML = '<option value="">Error</option>';
+        });
+
+    // 2. Carregar Cidades quando um Estado é Selecionado
+    stateDropdown.addEventListener('change', () => {
+        const selectedStateIso2 = stateDropdown.value;
+        cityDropdown.innerHTML = '<option value="">Loading...</option>';
+        cityDropdown.disabled = true;
+
+        if (!selectedStateIso2) {
+            cityDropdown.innerHTML = '<option value="">Select the City</option>';
+            return;
+        }
+
+        fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states/${selectedStateIso2}/cities`, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(cities => {
+                cityDropdown.innerHTML = '<option value="">Select the City</option>'; // Limpa opções anteriores
+                cities.sort((a, b) => a.name.localeCompare(b.name)); // Ordenar cidades por nome
+                cities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.name;
+                    option.textContent = city.name;
+                    cityDropdown.appendChild(option);
+                });
+                cityDropdown.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                cityDropdown.innerHTML = '<option value="">Error</option>';
+                cityDropdown.disabled = false; // Habilitar mesmo com erro para permitir nova tentativa
+            });
+    });
+});
+
 
   /**
    * Preloader (Exemplo)

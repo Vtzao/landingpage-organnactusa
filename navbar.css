@@ -33,7 +33,7 @@
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.9s;
 }
 
 a:hover {
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   /* A classe .fixed-top é aplicada via HTML e Bootstrap, o que é bom */
   background-color: transparent; /* NAVBAR COMEÇA TRANSPARENTE */
   padding: 20px 0;
-  transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out; /* Transição suave */
+  transition: background-color 0.9s ease-out, box-shadow 0.9s ease-out; /* Transição suave */
   z-index: 997;
 }
 
@@ -66,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 8px;
 }
 
+
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
@@ -75,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 26px;
   margin: 0;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 
 .header .btn-getstarted:hover,
@@ -127,6 +128,10 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
+  .header .logo-nav img{
+    opacity: 100%;
+  }
+
   .navmenu {
     padding: 0;
   }
@@ -152,9 +157,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.7s;
   }
 
   .navmenu a i,
@@ -240,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.7s;
   }
   /* Cor do ícone do menu mobile quando o header está escuro */
   .scrolled .header .mobile-nav-toggle {
@@ -263,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
     overflow-y: auto;
-    transition: 0.3s;
+    transition: 0.7s;
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
@@ -277,9 +282,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.7s;
   }
 
   .navmenu a i,
