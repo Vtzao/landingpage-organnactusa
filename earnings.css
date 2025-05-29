@@ -110,7 +110,7 @@ body.organnact-widget-page-context {
     box-sizing: border-box;
     line-height: 1.2;
     margin-bottom: 10px;
-    background-color: #fff;
+    background-color: #ecedee;
     cursor: pointer; /* Indica interatividade */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
