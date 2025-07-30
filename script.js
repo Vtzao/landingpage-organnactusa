@@ -74,6 +74,7 @@ console.log("Script.js carregado e executando.");
       }
     });
   });
+  
 
   /**
    * Toggle para dropdowns no menu mobile
