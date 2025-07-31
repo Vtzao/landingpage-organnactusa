@@ -330,119 +330,134 @@
         <div class="contact-form-wrapper">
             <h2 class="text-center mb-4">Registration Form</h2>
             
-            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHa000003Ayqn" method="POST">
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHZ000005yZ3F" method="POST">
 
-                <input type=hidden name='captcha_settings' value='{"keyname":"partners_usa","fallback":"true","orgId":"00DHa000003Ayqn","ts":""}'>
-                <input type=hidden name="oid" value="00DHa000003Ayqn">
-                <input type=hidden name="retURL" value="http://organnact.com"> 
+    <input type=hidden name='captcha_settings' value='{"keyname":"Partners_Usa","fallback":"true","orgId":"00DHZ000005yZ3F","ts":""}'>
+    <input type=hidden name="oid" value="00DHZ000005yZ3F">
+    <input type=hidden name="retURL" value="/success.html">
 
-                <input type=hidden name="oid" value="1">
-                <input type=hidden name="oid" value="debugEmail" value="vitor.almeida@organnact.com">
-                
+    <!--DEBUG DO ENVIO SALESFORCE-->
+    <input type="hidden" name="debug" value="1">
+    <input type="hidden" name="debugEmail" value="vitor.almeida@organnact.com"> 
+    <input type="hidden" name="lead_source" value="Partners USA">
+    <!-- FINAL DEBUG -->
 
-                    <div class="col-md-6">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-person"></i>
-                            <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" maxlength="40" required="">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-person"></i>
-                            <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" maxlength="80" required="">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-envelope"></i>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" maxlength="80" required="">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-telephone"></i>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Telephone" maxlength="40" required="">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-geo-alt"></i>
-                            <input  id="state" maxlength="20" name="state" class="form-control" placeholder="State in USA" size="20" type="text" required="" />
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <input  id="city" maxlength="40" name="city" class="form-control" placeholder="City" size="20" type="text" />
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-briefcase"></i>
-                            <select id="00NHa000005pNpJ" name="00NHa000005pNpJ" title="How do you want to act?" class="form-control" required="">
-                                <option value="">How do you want to act?</option>
-                                <option value="Influencer / Content Producer">Influencer / Content Producer</option>
-                                <option value="Reseller">Reseller</option>
-                                <option value="Distributor">Distributor</option>
-                                <option value="Affiliate">Affiliate</option>
-                            </select>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-gear"></i>
-                            <select id="00NHa000005pNu9" name="00NHa000005pNu9" title="Mode of Operation" class="form-control" required="">
-                                <option value="">Mode of Operation</option>
-                                <option value="Physical Store">Physical Store</option>
-                                <option value="Social Media">Social Media</option>
-                                <option value="Hospital/Clinic">Hospital/Clinic</option>
-                                <option value="Distribution">Distribution</option>
-                                <option value="Field / Visits">Field / Visits</option>
-                            </select>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="bi bi-search"></i>
-                            <select id="00NHa000005pNxN" name="00NHa000005pNxN" title="How did you find us?" class="form-control" required="">
-                                <option value="">How did you find us?</option>
-                                <option value="Google">Google</option>
-                                <option value="Social Media">Social Media</option>
-                                <option value="Website">Website</option>
-                                <option value="Referral">Referral</pointion>
-                                <option value="AI Search">AI Search</option>
-                            </select>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <div class="g-recaptcha" data-sitekey="6Lck3pQrAAAAADEhZgG187iK8OY7Y76dMSyQb_u-"></div><br>
-                        <button type="submit" name="submit" class="btn btn-primary btn-submit">SEND FORM</button>
-                    </div>
+    <div class="row gy-4">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-person"></i>
+                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" maxlength="40">
                 </div>
-            </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-person"></i>
+                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" maxlength="80">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" maxlength="80">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-telephone"></i>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Telephone" maxlength="40">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-geo-alt"></i>
+                    <input id="00NHp000018Tmxn" name="00NHp000018Tmxn" title="Street Address" class="form-control" placeholder="State in USA" maxlength="20">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <input id="00NHp000018Tmxl" name="00NHp000018Tmxl" title="City" class="form-control" placeholder="City" maxlength="40">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-briefcase"></i>
+                    <select id="00NHZ0000044L1x" name="00NHZ0000044L1x" title="How do you want to act?" class="form-control">
+                        <option value="">How do you want to act?</option>
+                        <option value="Influencer / Content Producer">Influencer / Content Producer</option>
+                        <option value="Reseller">Reseller</option>
+                        <option value="Distributor">Distributor</option>
+                        <option value="Affiliate">Affiliate</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-gear"></i>
+                    <select id="00NHZ0000044LYD" name="00NHZ0000044LYD" title="Mode of Operation" class="form-control">
+                        <option value="">Mode of Operation</option>
+                        <option value="Physical Store">Physical Store</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Hospital/Clinic">Hospital/Clinic</option>
+                        <option value="Distribution">Distribution</option>
+                        <option value="Field / Visits">Field / Visits</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="bi bi-search"></i>
+                    <select id="00NHZ0000044Lef" name="00NHZ0000044Lef" title="How did you find us?" class="form-control">
+                        <option value="">How did you find us?</option>
+                        <option value="Google">Google</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Website">Website</option>
+                        <option value="Referral">Referral</option>
+                        <option value="AI Search">AI Search</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <label for="lead_source"></label><select  id="lead_source" name="lead_source"><option value="Partners USA"></option></select>
+        <select  id="00NHp000018Tmxp" name="00NHp000018Tmxp" title="Country"><option value="United States"></option></select>
+
+        <div class="col-12 text-center">
+            <div class="g-recaptcha" data-sitekey="6Lck3pQrAAAAADEhZgG187iK8OY7Y76dMSyQb_u-"></div>
+            <br>
+            <input type="submit" name="submit" class="btn btn-primary btn-submit" value="SEND FORM">
+        </div>
+        
+    </div>
+</form>
+        </div>
+        </div>
+        </div>
             </div>
         </div>
     </div>
@@ -507,8 +522,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
-</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        // Pega a URL da página atual
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Verifica se o parâmetro 'success' existe e é 'true'
+        if (urlParams.get('success') === 'true') {
+          // Encontra a mensagem de confirmação pelo ID
+          const confirmationMessage = document.getElementById('confirmationMessage');
+          
+          // Se a mensagem existir, remove a classe 'd-none' para exibi-la
+          if (confirmationMessage) {
+            confirmationMessage.classList.remove('d-none');
+          }
+        }
+      });
+    </script>
 </body>
 </html>

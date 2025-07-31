@@ -180,6 +180,14 @@
   margin-bottom: 20px;
 }
 
+#contact > div.container.form-container-overlap > div > div > div > form > div.col-12.text-center > div, #contact > div.container.form-container-overlap > div > div > div > form > div > label{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
 @media (max-width: 992px) {
   .contact .form-container-overlap {
     margin-top: -120px;
@@ -228,4 +236,8 @@
   .contact .map-section {
     height: 400px;
   }
+}
+
+#lead_source, #contact > div.container.form-container-overlap > div > div > div > form > label, #\30 0NHp000018Tmxp{
+  display: NONE;
 }
