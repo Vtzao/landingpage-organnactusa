@@ -4,9 +4,9 @@
 /* Global Colors - Usadas em todo o site */
 :root {
   --background-color: #ffffff;
-  --default-color: rgba(0, 110, 106, 0.616);    /* Cor padrão para texto e fundo da navbar ao rolar */
+  --default-color: #f28a2b;    /* Cor padrão para texto e fundo da navbar ao rolar */
   --heading-color: #ffff;      /* Cor para títulos, incluindo o logo na navbar */
-  --accent-color: #f9b132;     /* Cor de destaque para botões, links ativos */
+  --accent-color: #f28a2b;     /* Cor de destaque para botões, links ativos */
   --surface-color: #ffffff;
   --contrast-color: #323a3a;   /* Cor de contraste para texto sobre fundos coloridos */
 }
@@ -14,8 +14,8 @@
 /* Nav Menu Colors - Específicas para o menu de navegação */
 :root {
   --nav-color: #ffff;                     /* Cor padrão dos links da navbar (inicialmente branca) */
-  --nav-hover-color: #f9b132;            /* Cor dos links da navbar ao passar o mouse/ativo */
-  --nav-mobile-background-color: rgba(0, 110, 106, 0.616);
+  --nav-hover-color: #ffd9a7;            /* Cor dos links da navbar ao passar o mouse/ativo */
+  --nav-mobile-background-color: #DF8000;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #ffffff;
   --nav-dropdown-hover-color: #f9b132;
@@ -69,20 +69,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: white;
+  background: none;
+  border: 2px solid #ffff;
   font-size: 14px;
   font-family: "Josefin Sans", sans-serif;;
   padding: 8px 26px;
   margin: 0;
-  border-radius: 4px;
+  border-radius: 20px;
   transition: 0.7s;
 }
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: var(--accent-color);
+  background: white;
 }
 
 @media (max-width: 1200px) {
