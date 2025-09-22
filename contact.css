@@ -110,7 +110,7 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 18px;
   z-index: 10;
 }
@@ -131,12 +131,12 @@
   color: var(--default-color);
   background-color: var(--surface-color);
   font-size: 15px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 .contact .contact-form-wrapper .form-group .input-with-icon .form-control:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 40%);
 }
 
 .contact .contact-form-wrapper .form-group .input-with-icon .form-control::placeholder {
